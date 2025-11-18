@@ -24,7 +24,7 @@ pip install mujoco numpy proxsuite qpmpc qpsolvers
 From the repo root (or any directory with `PYTHONPATH=/path/to/upkie`), run:
 
 ```bash
-python3 -m zepto.testing  --target-velocity 0.0 --target-turn -0.5
+python3 testing.py  --target-velocity 0.0 --target-turn -0.5
 ```
 You can implement keyboard or controller input if you want better controling 
 
