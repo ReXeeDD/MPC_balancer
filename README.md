@@ -1,4 +1,4 @@
-# Standalone Balancer
+# Zepto Standalone Balancer
 
 This directory mirrors the MPC-based wheel balancing logic from Upkie but removes
 all dependencies on the rest of the codebase. It contains:
@@ -24,7 +24,7 @@ pip install mujoco numpy proxsuite qpmpc qpsolvers
 From the repo root (or any directory with `PYTHONPATH=/path/to/upkie`), run:
 
 ```bash
-python3 -m zepto.testing --headles --target-velocity 0.2
+python3 -m zepto.testing  --target-velocity 0.0 --target-turn -0.5
 ```
 
 

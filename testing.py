@@ -34,6 +34,14 @@ def parse_args() -> argparse.Namespace:
         default=0.0,
         help="Sagittal ground velocity target in m/s",
     )
+    # --- NEW ARGUMENT ---
+    parser.add_argument(
+        "--target-turn",
+        type=float,
+        default=0.0,
+        help="Yaw/Turning velocity differential in rad/s",
+    )
+    # --------------------
     parser.add_argument(
         "--headless",
         action="store_true",
@@ -45,8 +53,13 @@ def parse_args() -> argparse.Namespace:
 def run_simulation(args: argparse.Namespace) -> None:
     model = mujoco.MjModel.from_xml_path(str(MODEL_PATH))
     data = mujoco.MjData(model)
+    
+    # Pass the new target-turn argument here
     balancer = MujocoWheelBalancer(
-        model, wheel_radius=0.09, target_ground_velocity=args.target_velocity
+        model, 
+        wheel_radius=0.09, 
+        target_ground_velocity=args.target_velocity,
+        target_turn_velocity=args.target_turn  # <--- PASS IT HERE
     )
 
     def step():
@@ -61,7 +74,7 @@ def run_simulation(args: argparse.Namespace) -> None:
     else:
         try:
             import mujoco.viewer as mujoco_viewer
-        except ImportError as exc:  # pragma: no cover
+        except ImportError as exc:
             raise RuntimeError(
                 "mujoco.viewer is unavailable; rerun with --headless"
             ) from exc
@@ -71,7 +84,6 @@ def run_simulation(args: argparse.Namespace) -> None:
             while viewer.is_running() and time.time() < deadline:
                 step()
                 viewer.sync()
-
 
 if __name__ == "__main__":
     run_simulation(parse_args())

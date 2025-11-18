@@ -78,12 +78,12 @@
   </worldbody>
 
   <actuator>
-    <position name="left_hip" joint="left_hip" ctrllimited="true" kp="20" ctrlrange="-8 8" gear="1" />
-    <position name="left_knee" joint="left_knee" ctrllimited="true" kp="20"  ctrlrange="-4 4" gear="1" />
-    <motor name="left_wheel" joint="left_wheel" ctrllimited="true"   ctrlrange="-2 2" gear="1" />
-    <position name="right_hip" joint="right_hip" ctrllimited="true" kp="20"  ctrlrange="-8 8" gear="1" />
-    <position name="right_knee" joint="right_knee" ctrllimited="true" kp="20"  ctrlrange="-4 4" gear="1" />
-    <motor name="right_wheel" joint="right_wheel" ctrllimited="true" ctrlrange="-2 2" gear="1" />
+    <position name="left_hip" joint="left_hip" ctrllimited="true" kp="5" ctrlrange="-8 8" gear="1" />
+    <position name="left_knee" joint="left_knee" ctrllimited="true" kp="5"  ctrlrange="-4 4" gear="1" />
+    <velocity name="left_wheel" joint="left_wheel" ctrllimited="true"   ctrlrange="-2 2" gear="1" />
+    <position name="right_hip" joint="right_hip" ctrllimited="true" kp="5"  ctrlrange="-8 8" gear="1" />
+    <position name="right_knee" joint="right_knee" ctrllimited="true" kp="5"  ctrlrange="-4 4" gear="1" />
+    <velocity name="right_wheel" joint="right_wheel" ctrllimited="true" ctrlrange="-2 2" gear="1" />
   </actuator>
 
   <sensor>
