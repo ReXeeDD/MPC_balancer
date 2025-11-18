@@ -26,7 +26,7 @@ From the repo root (or any directory with `PYTHONPATH=/path/to/upkie`), run:
 ```bash
 python3 -m zepto.testing  --target-velocity 0.0 --target-turn -0.5
 ```
-You can implement keyboard or controller control if you want better controling 
+You can implement keyboard or controller input if you want better controling 
 
 I will provide hardware implemenation after i complete my project
 
