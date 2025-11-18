@@ -24,9 +24,8 @@ pip install mujoco numpy proxsuite qpmpc qpsolvers
 From the repo root (or any directory with `PYTHONPATH=/path/to/upkie`), run:
 
 ```bash
-python3 -m zepto.testing --headless --target-velocity 0.2
+python3 -m zepto.testing --headles --target-velocity 0.2
 ```
 
-If you have a working OpenGL/EGL setup you can drop `--headless` to launch the
-MuJoCo viewer.
+
 
