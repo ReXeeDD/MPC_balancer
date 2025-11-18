@@ -1,4 +1,4 @@
-# Zepto Standalone Balancer
+#Standalone Balancer
 
 This directory mirrors the MPC-based wheel balancing logic from Upkie but removes
 all dependencies on the rest of the codebase. It contains:
