@@ -13,7 +13,7 @@ all dependencies on the rest of the codebase. It contains:
 
 ## Requirements
 
-Install the runtime dependencies into any Python environment:
+Install the runtime dependencies into any Python environment(Python 3.9):
 
 ```bash
 pip install mujoco numpy proxsuite qpmpc qpsolvers
