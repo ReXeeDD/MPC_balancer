@@ -44,7 +44,7 @@ class MPCBalancer:
         max_ground_velocity: float = 3.0,
         nb_timesteps: int = 50,
         sampling_period: float = 0.02,
-        stage_input_cost_weight: float = 1e-3,
+        stage_input_cost_weight: float = 1e-2,
         stage_state_cost_weight: float = 1e-3,
         terminal_cost_weight: float = 1.0,
         warm_start: bool = True,
