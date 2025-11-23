@@ -13,12 +13,31 @@ all dependencies on the rest of the codebase. It contains:
 
 ## Requirements
 
-Install the runtime dependencies into any Python environment(Python 3.9):
+Install the runtime dependencies into any Python environment(Python 3.9.23):
 
 ```bash
-pip install mujoco numpy proxsuite qpmpc qpsolvers
-```
+pip install mujoco numpy proxsuite qpmpc qpsolvers scipy cmeel
 
+```
+Name: mujoco
+Version: 3.3.5
+Name: numpy
+Version: 2.0.2
+Name: qpmpc
+Version: 3.1.0
+Name: qpsolvers
+Version: 4.8.1
+Name: proxsuite
+Version: 0.7.2
+Name: scipy
+Version: 1.13.1
+Name: cmeel
+Version: 0.57.3
+
+```bash
+pip install mujoco==3.3.5 numpy==2.0.2 proxsuite==0.7.2 qpmpc==3.1.0 qpsolvers==4.8.1 scip
+y==1.13.1 cmeel==0.57.3
+```
 ## Running the test
 
 From the repo root (or any directory with `PYTHONPATH=/path/to/upkie`), run:
