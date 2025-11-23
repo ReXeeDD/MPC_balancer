@@ -11,9 +11,9 @@ all dependencies on the rest of the codebase. It contains:
 - `testing.py`: simple executable that loads the XML in MuJoCo and commands the
   MPC balancer (headless or with viewer).
 
-## Requirements
+## Requirements(Ubuntu 20.04)
 
-Install the runtime dependencies into any Python environment(Python 3.9.23):
+Install the runtime dependencies into  Python environment(Python 3.9.23):
 
 
 
